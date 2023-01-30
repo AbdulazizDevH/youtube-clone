@@ -1,0 +1,16 @@
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flexbox($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}

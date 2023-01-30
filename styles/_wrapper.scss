@@ -1,0 +1,14 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  .navbar {
+    grid-column: 1 / 3;
+  }
+  .sidebar {
+    
+  }
+  .video-content {
+    background-color: cornflowerblue;
+  }
+}
