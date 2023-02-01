@@ -38,24 +38,56 @@
   }
 
   &__list-container {
-    padding: 12px;
     overflow: scroll;
+    padding: 10px 5px 0 0;
     height: calc(100vh - 56px);
+    @extend %scrollbar;
   }
-  &__list {
-    // overflow: scroll;
-    // &::-webkit-scrollbar-button {
-    //   width: 200px;
-    //   background-color: black;
-    // }
-    // &::-webkit-scrollbar-corner {
-    //   width: 200px;
-    //   background-color: black;
-    // }
-    // &::-webkit-scrollbar-corner {
-    //   width: 200px;
-    //   background-color: black;
-    // }
+  &__list-home {
+    padding: 0 12px;
+  }
+  &__list-lib {
+    padding: 0 12px;
+    @extend %list-border-top;
+  }
+  &__list-menu {
+    padding: 0 12px;
+  }
+  &__list-follow {
+    padding: 0 12px;
+    @extend %list-border-top;
+    @extend %sidebar-title;
+  }
+  &__list-nav {
+    padding: 0 12px;
+    @extend %list-border-top;
+    @extend %sidebar-title;
+  }
+  &__list-more {
+    padding: 0 12px;
+    @extend %list-border-top;
+    @extend %sidebar-title;
+  }
+  &__list-setting {
+    padding: 0 12px;
+    @extend %list-border-top;
+  }
+  &__list-footer {
+    @extend %list-border-top;
+    padding: 4px 24px !important;
+    a {
+      padding-top: 12px;
+      display: inline-block;
+      text-decoration: none;
+      color: #606060;
+      @include font(1.3rem, 1.8rem, 500);
+    }
+    span {
+      display: inline-block;
+      color: #909090;
+      @include font(1.2rem, 1.8rem, 400);
+      padding: 16px 0 0 0;
+    }
   }
   &__link {
     @include flexbox(center, flex-start);
@@ -67,8 +99,10 @@
     &:hover {
       background-color: rgba(0, 0, 0, 0.05);
     }
-    svg, span {
+    svg,
+    img {
       margin-right: 24px;
+      border-radius: 15px;
       display: inline-block;
       @include width-height(24px !important, 24px !important);
     }
