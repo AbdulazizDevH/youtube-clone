@@ -1,0 +1,30 @@
+.sidebar-mini__link {
+  @include font(1rem, 1.4rem, 500);
+  @include flexbox(center, center);
+  flex-direction: column;
+  text-decoration: none;
+  color: #0f0f0f;
+  margin: 0 4px;
+  padding: 16px 0;
+  width: 64px;
+  border-radius: 9px;
+  svg {
+    @include width-height(24px !important, 24px !important);
+    margin-bottom: 4px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media screen and (max-width: 1312px) {
+    .sidebar-mini {
+      display: block;
+      &__header {
+        @include flexbox(center, flex-start);
+        display: none;
+        background-color: white;
+        padding: 8px 16px;
+      }
+    }
+  }

@@ -10,5 +10,30 @@
   }
   .video-content {
     // background-color: cornflowerblue;
+    
+  }
+}
+
+@media screen and (max-width: 1312px) {
+  .wrapper {
+    .navbar {
+      grid-column: 1 / 3;
+    }
+    .sidebar {
+      position: fixed;
+      background-color: white !important;
+      left: -240px;
+      top: 0;
+      transition: left 0.15s;
+      &__background {
+        // display: block;
+      }
+      &__header {
+        @include flexbox(center, flex-start);
+      }
+    }
+    // .video-content {
+    //   grid-column: 1 / 3;
+    // }
   }
 }

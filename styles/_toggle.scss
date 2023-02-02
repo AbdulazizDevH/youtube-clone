@@ -12,5 +12,44 @@
     border: 0.5px solid rgba(8, 8, 188, 0.8) !important;
   }
 }
+// Mini sidebar
+.sidebar-mini {
+  width: 72px !important;
+  div {
+    padding: 0;
+    overflow: hidden;
+  }
+  .sidebar-mini__list {
+    div {
+      display: none;
+      &:first-child,
+      &:nth-child(2) {
+        display: block;
+        padding: 0 !important;
+        margin: 0;
+        border: none;
+      }
+    }
+  }
 
-// 
+  .sidebar__link {
+    text-align: center;
+    @include flexbox(center, center);
+    @include font(1rem, 1.4rem, 500);
+    flex-direction: column;
+    margin: 0 4px;
+    padding: 16px 0;
+    width: 64px;
+    svg {
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+  }
+}
+//
+.left {
+  left: 0 !important;
+}
+.none {
+  display: none;
+}
