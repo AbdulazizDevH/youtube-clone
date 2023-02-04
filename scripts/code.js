@@ -22,9 +22,9 @@ sidebarBtn.forEach((element) => {
 
 window.addEventListener("click", (e) => {
   if (e.target.classList.contains("sidebar__background")) {
-    hideSidebar(window.innerWidth < 1313);  
+    hideSidebar(window.innerWidth < 1313);
   }
-})
+});
 
 window.addEventListener("resize", (e) => {
   sidebar.classList.remove(window.innerWidth > 1313 ? "left" : "sidebar-mini");
@@ -35,3 +35,4 @@ function hideSidebar(windowInnerWidth) {
   sidebar.classList.toggle(windowInnerWidth ? "left" : "sidebar-mini");
   if (windowInnerWidth) sidebarBack.classList.toggle("none");
 }
+
